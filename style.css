@@ -5,20 +5,20 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
   font-family: "Outfit", sans-serif;
   background-color: hsl(212, 45%, 89%);
-  font-size: 15px;
+  font-size: 0.9375rem; /* 15px */
 }
 
 .container {
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   background-color: hsl(0, 0%, 100%);
-  width: 330px;
-  height: auto;
+  max-width: 330px;
+  width: min(99vw, 330px);
   border-radius: 15px;
   padding: 15px;
 }
@@ -26,7 +26,6 @@ body {
 .inner {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
@@ -36,25 +35,25 @@ figure img {
   border-radius: 15px;
 }
 
-figcaption h2 {
-    color: hsl(218, 44%, 22%);
-    text-align: center;
-    font-weight: bold;
-    padding: 10px;
+figcaption h1 {
+  color: hsl(218, 44%, 22%);
+  text-align: center;
+  font-weight: bold;
+  padding: 10px;
 }
 
 figcaption p {
-    color: hsl(216, 15%, 48%);
-    text-align: center;
-    padding: 14px 18px;
-    font-weight: 500;
-    line-height: 20px    ;
+  color: hsl(216, 15%, 48%);
+  text-align: center;
+  padding: 14px 18px;
+  font-weight: 500;
+  line-height: 20px;
 }
 
 /* Desktop*/
-@media (min-width: 1440px) {
-    /*Mobile*/
+@media (min-width: 90rem) {
+  /*Mobile*/
   .container {
-    width: 350px;
+    width: 21.875rem;
   }
 }
